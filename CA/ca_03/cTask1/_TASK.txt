@@ -1,0 +1,29 @@
+Run from within `src/` :
+  javac -d ./../bin/ *.java ; java -cp ./../bin Runner
+
+TASKQuestion:
+What is wrong with the approach to override methods to
+do nothing?
+
+Marks will be awarded for:
+a) Briefly explaining a negative consequence of this approach.
+
+    * Since the Duck's interface includes a fly() method, the client programmer
+      is set to expect this method to preform a certain functionality (in this case
+      for the duck to take flight ). However the negative consequence of our current
+      approach is that the client programmers expectation will not be fulfilled.
+      This leaves us with objects which seem inconsistent or broken in comparison
+      to similar object that do fulfill the client programmers expectation
+
+b) Having used the terms 'client programmer' and 'interface'
+	 appropriately in the explanation
+
+    * Client programmer: is the developer(programmer) utilising the classes and
+      interfaces and their attributes, constructors and methods etc that you
+      design.
+
+    * Interface: is the set of methods available to an object. .
+      These methods are defined in the objects class.
+
+    //* Java Interface: is a set of abstract methods which upon implementation in
+      subclasses have a 'public' access modifier.

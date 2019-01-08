@@ -1,0 +1,45 @@
+Run from within `src/` :
+  javac -d ./../bin/ *.java ; java -cp ./../bin Runner
+
+
+A problem occurs however when we need to incorporate a
+'DecoyDuck' class into this design. The DecoyDuck is
+a non-quacking, non-flying duck. Where does it belong?
+How can you solve this using inheritance?
+
+	* By providing the client programmer with a 'SwimmingDuck' subclass of the
+	 	'Duck' class to contain the swim() method (ie the 'Duck' class no longer has
+		the method swim()). The 'DecoyDuck' can now sublclass 'SwimmingDuck' to ensure
+		it only swim()s.
+
+TASKQuestion:
+What is wrong with the approach to introduce  classifiers
+(i.e. 'FlyingDuck', NonFlyingDuck' etc.) into the type
+hierarchy of the ducks problem?
+
+Marks will be awarded for:
+a) Briefly explaining a negative consequence of this approach.
+
+		* This approach will lead to class explosion since for all possible
+			combinations of fly(), swim() and quack() we must have an individual class
+			extending Duck. Thus will have 6 different subclasses of the Duck class.
+			In the event of having more methods this number increases significantly.
+
+		* If we decide to change the code of the fly method in our code then we must
+		  navigate to each individual class file and make the same changes to each
+			one. This is due to a large amount of repeating code which does not adhere
+			the DRY principal.
+
+
+b) Having used the terms 'repeating code', 'class explosion' and
+	referring to the "DRY" synonym appropriately in the explanation.
+
+		* repeating code: Code which can be seen as duplicated from one place to
+			another.
+
+		* class explosion: As explained above, is the poor implementation of
+			inheritance causing the creation of several subclasses inorder to satisfy
+			all possible scenarios/combinations and as a consequence leads to repeated
+			 code amongst classes.
+
+		* DRY: stands for 'Don't Repeat Yourself'

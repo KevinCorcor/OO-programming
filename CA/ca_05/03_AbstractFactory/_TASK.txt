@@ -1,0 +1,7 @@
+The code in this folder isolates, just the Abstract Factory part, 
+of the Head First Java Book's chapter 4.
+
+1. Get the code to compile
+2. Run the code
+
+3. Understand why it is not printing anything, and make the alteration necessary

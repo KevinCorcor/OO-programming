@@ -1,0 +1,26 @@
+Run from within `src/` :
+  javac -d ./../bin/ *.java ; java -cp ./../bin Runner
+
+Is there any problem with the suggestion to
+avoid inheritance and use interfaces instead?
+
+	* An interface has no code as such. It just has abstract methods.
+	* Every subclass must implement each of these methods with a `public` access
+		modifier. Which often leads to significant duplication of code.
+	*	In the event that we want to change the code of all abstract method implementations of an
+		interface we must edit each individual class that implements it rather than
+		editing one method which is	then inherited by all subclasses.
+
+Imagine a month passes and the Simulation Duck Software is working fine.
+The customer asks for a change to the fly() method
+	- add a println("wheesh"); to show the flying sound-effect to Ducks.
+
+	Try to do this - what does it involve?
+
+		*	This involves navigating to each and every subclass of Flyable,  locating
+			the fly() method and adding the line `System.out.println("wheesh");`.
+		* Hence we have repeated code and not stuck to a DRY development.
+
+
+TASK Part:
+(Study pages 9 - 14 of the Head-First Design Patterns)
