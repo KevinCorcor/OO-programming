@@ -1,0 +1,17 @@
+factories
+ga
+ga.evaluators
+ga.evaluators.binary
+ga.evaluators.integer
+ga.mutators
+ga.mutators.binary
+ga.mutators.integer
+ga.populations
+ga.populations.binary
+ga.populations.integer
+ga.reproducers
+ga.reproducers.binary
+ga.reproducers.integer
+ga.selectors
+ga.selectors.binary
+ga.selectors.integer
